@@ -8,8 +8,6 @@ import (
 	"fmt"
 	"os"
 	"strings"
-
-	"github.com/gothanks/match/glob"
 )
 
 func main() {
@@ -17,7 +15,7 @@ func main() {
 	if err != nil {
 		fail(err)
 	}
-	isMatch, err := glob.Match(pattern, src)
+	isMatch, err := match(pattern, src)
 	if err != nil {
 		fail(err)
 	}

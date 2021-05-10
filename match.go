@@ -1,11 +1,4 @@
-/*
-glob package matches strings against patterns.
-
-Supports wildcards:
-	-  matches any single character
-	*  matches everything
-*/
-package glob
+package main
 
 import (
 	"regexp"
@@ -20,7 +13,11 @@ var specials = makeSpecials([]rune{
 
 // match returns true if src matches pattern,
 // false otherwise.
-func Match(pattern string, src string) (bool, error) {
+//
+// Supports wildcards:
+// 	-  matches any single character
+// 	*  matches everything
+func match(pattern string, src string) (bool, error) {
 	pat := translate(pattern)
 	re, err := regexp.Compile(pat)
 	if err != nil {

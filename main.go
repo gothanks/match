@@ -22,12 +22,6 @@ func main() {
 	fmt.Println(src)
 }
 
-// match returns true if src matches pattern,
-// false otherwise.
-func match(pattern string, src string) bool {
-	return strings.Contains(src, pattern)
-}
-
 // readInput reads pattern and source string
 // from command line arguments and returns them.
 func readInput() (pattern, src string, err error) {

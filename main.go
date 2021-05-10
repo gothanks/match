@@ -15,7 +15,10 @@ func main() {
 	if err != nil {
 		fail(err)
 	}
-	isMatch := match(pattern, src)
+	isMatch, err := match(pattern, src)
+	if err != nil {
+		fail(err)
+	}
 	if !isMatch {
 		os.Exit(0)
 	}

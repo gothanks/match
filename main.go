@@ -20,7 +20,7 @@ func main() {
 		fail(err)
 	}
 	if !isMatch {
-		os.Exit(0)
+		os.Exit(1)
 	}
 	fmt.Println(src)
 }

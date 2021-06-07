@@ -15,7 +15,7 @@ var specials = makeSpecials([]rune{
 // false otherwise.
 //
 // Supports wildcards:
-// 	-  matches any single character
+// 	?  matches any single character
 // 	*  matches everything
 func match(pattern string, src string) (bool, error) {
 	pat := translate(pattern)

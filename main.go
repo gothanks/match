@@ -33,7 +33,7 @@ func readInput() (pattern, src string, err error) {
 	if pattern == "" {
 		return pattern, src, errors.New("missing pattern")
 	}
-	src = strings.Join(flag.Args(), "")
+	src = strings.Join(flag.Args(), " ")
 	if src == "" {
 		return pattern, src, errors.New("missing string to match")
 	}
